@@ -1,0 +1,19 @@
+[project]
+name = "scene-helper"
+version = "0.1.0"
+description = "An agent that turns short descriptions into video clips"
+requires-python = ">=3.10"
+dependencies = [
+    "runwayml>=4.13.0",
+    "openai>=1.30.0",
+    "python-dotenv>=1.0.0",
+    "httpx>=0.27.0",
+    "pyautogui>=0.9.54",
+]
+
+[project.scripts]
+scene-helper = "scene_helper.cli:main"
+demo-helper = "demos_helper.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["scene_helper*", "demos_helper*"]

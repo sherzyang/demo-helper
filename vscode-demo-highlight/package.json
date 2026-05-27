@@ -1,0 +1,38 @@
+{
+  "name": "demo-highlight",
+  "displayName": "Demo Highlight",
+  "description": "Applies visual code highlights (boxes, arrows, underlines) during demo playback for training videos.",
+  "version": "0.1.0",
+  "publisher": "demo-helper",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
+  "activationEvents": ["*"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "demoHighlight.clear",
+        "title": "Demo Highlight: Clear All"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0",
+    "@vscode/vsce": "^2.22.0"
+  }
+}
